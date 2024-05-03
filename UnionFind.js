@@ -53,3 +53,5 @@ class UnionFind {
         return this.find(nodeA) === this.find(nodeB);
     }
 }
+
+module.exports = UnionFind;
