@@ -1,5 +1,5 @@
 # UnionFind
-UnionFind Algorithm
+JavaScript implementation of [this](https://yuminlee2.medium.com/union-find-algorithm-ffa9cd7d2dba), plus some extras.
 
 # Applications
 
@@ -53,10 +53,20 @@ for (const [src, dest] of edges) {
 
 ## Get total number of connected nodes
 
+This will return the number of disjointed sets.
+
 ```js
 // We assume you have already added edges
 const connectedNodesCount = UF.count;
 ```
+---
+
+## Check if cycle exists in any set
+
+```js
+const isCyclic = UF.hasCycle();
+```
+
 ---
 
 ## Check if path exists
