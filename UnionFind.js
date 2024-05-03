@@ -10,15 +10,7 @@ class UnionFind {
         // Total number of connected nodes.
         this.count = numberOfItems;
         if (edges) {
-            this.addEdges(edges);
-        }
-    }
-
-    // Requires 2d array of ints. Must be of following shape:
-    //  [[Number, Number], [Number, Number], [Number, Number]]
-    addEdges(edges /*=[[0,1],[1,3]]*/) {
-        for (const [src, dest] of edges) {
-            this.union(src, dest);
+            this.unionAll(edges);
         }
     }
 
@@ -47,6 +39,14 @@ class UnionFind {
         }
 
         this.count -= 1;
+    }
+
+    // Requires 2d array of ints. Must be of following shape:
+    //  [[Number, Number], [Number, Number], [Number, Number]]
+    unionAll(edges /*=[[0,1],[1,3]]*/) {
+        for (const [src, dest] of edges) {
+            this.union(src, dest);
+        }
     }
 
     hasPath(nodeA, nodeB) {
