@@ -49,7 +49,7 @@ for (const [src, dest] of edges) {
 
 ```js
 // We assume you have already added edges
-const connectedNodes = UF.count;
+const connectedNodesCount = UF.count;
 ```
 ---
 
