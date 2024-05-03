@@ -16,7 +16,7 @@ const edges = [[0,1],[0,2],[3,5],[5,4],[4,3]];
 //       correct results.
 const numberOfVertices = 6;
 // Or you could programmatically find unique vertices:
-const numberOfVertices = new Set(edges.flat());
+const numberOfVertices = new Set(edges.flat()).size;
 const UF = new UnionFind(numberOfVertices, edges);
 ```
 
@@ -26,7 +26,7 @@ const UF = new UnionFind(numberOfVertices, edges);
 const edges = [[0,1],[0,2],[3,5],[5,4],[4,3]];
 const numberOfVertices = 6;
 // Or you could programmatically find unique vertices:
-const numberOfVertices = new Set(edges.flat());
+const numberOfVertices = new Set(edges.flat()).size;
 const UF = new UnionFind(numberOfVertices);
 UF.unionAll(edges);
 ```
@@ -37,7 +37,7 @@ UF.unionAll(edges);
 const edges = [[0,1],[0,2],[3,5],[5,4],[4,3]];
 const numberOfVertices = 6;
 // Or you could programmatically find unique vertices:
-const numberOfVertices = new Set(edges.flat());
+const numberOfVertices = new Set(edges.flat()).size;
 const UF = new UnionFind(numberOfVertices);
 for (const [src, dest] of edges) {
   UF.union(src, dest);
