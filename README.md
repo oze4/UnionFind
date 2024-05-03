@@ -24,7 +24,7 @@ const UF = new UnionFind(numberOfVertices, edges);
 const edges = [[0,1],[0,2],[3,5],[5,4],[4,3]];
 const numberOfVertices = 6;
 const UF = new UnionFind(numberOfVertices);
-UF.addEdges(edges);
+UF.unionAll(edges);
 ```
 
 ### Manually
