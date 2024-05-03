@@ -10,9 +10,9 @@ JavaScript implementation of [this](https://yuminlee2.medium.com/union-find-algo
 
 # Usage
 
-## To add nodes, via source and destination:
+## Add Edges/Nodes
 
-### Via Constructor
+### Constructor
 
 ```js
 const edges = [[0,1],[0,2],[3,5],[5,4],[4,3]];
@@ -27,7 +27,7 @@ const numberOfVertices = new Set(edges.flat()).size;
 const UF = new UnionFind(numberOfVertices, edges);
 ```
 
-### Via Method
+### Built-in Method
 
 ```js
 const edges = [[0,1],[0,2],[3,5],[5,4],[4,3]];
@@ -52,17 +52,19 @@ for (const [src, dest] of edges) {
 ```
 ---
 
-## Get total number of connected nodes
+## Get Count of Disjointed Components/Sets
 
 This will return the number of disjointed components/sets.
 
 ```js
 // We assume you have already added edges
-const connectedNodesCount = UF.count;
+const numOfSets = UF.count;
 ```
 ---
 
-## Check if cycle exists in any set
+## Check for Cycle
+
+Checks for cycle in any component/set (if graph contains disjointed sets).
 
 ```js
 const isCyclic = UF.hasCycle();
@@ -70,7 +72,9 @@ const isCyclic = UF.hasCycle();
 
 ---
 
-## Check if path exists
+## Check if Path Exists
+
+Check if a path exists between two nodes.
 
 ### Manually
 
@@ -78,7 +82,7 @@ const isCyclic = UF.hasCycle();
 const isPath = UF.find(nodeA) === UF.find(nodeB);
 ```
 
-### Built-in method
+### Built-in Method
 
 ```js
 const isPath = UF.hasPath(nodeA, nodeB);
