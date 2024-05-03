@@ -49,5 +49,5 @@ const isPath = UF.find(nodeA) === UF.find(nodeB);
 ### Built-in method
 
 ```js
-const isPath = UF.isPath(nodeA, nodeB);
+const isPath = UF.hasPath(nodeA, nodeB);
 ```
