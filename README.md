@@ -11,11 +11,11 @@ UnionFind Algorithm
 const edges = [[0,1],[0,2],[3,5],[5,4],[4,3]];
 // We have 6 total vertices.
 // NOTE: Even though we have 5 items in our edges array,
-//       we have 6 unique vertices. Therefore, providing
+//       we have 6 distinct vertices. Therefore, providing
 //       the numberOfItems via edges.length will not yield
 //       correct results.
 const numberOfVertices = 6;
-// Or you could programmatically find unique vertices:
+// Or you could programmatically find distinct vertices:
 const numberOfVertices = new Set(edges.flat()).size;
 const UF = new UnionFind(numberOfVertices, edges);
 ```
@@ -25,7 +25,7 @@ const UF = new UnionFind(numberOfVertices, edges);
 ```js
 const edges = [[0,1],[0,2],[3,5],[5,4],[4,3]];
 const numberOfVertices = 6;
-// Or you could programmatically find unique vertices:
+// Or you could programmatically find distinct vertices:
 const numberOfVertices = new Set(edges.flat()).size;
 const UF = new UnionFind(numberOfVertices);
 UF.unionAll(edges);
@@ -36,7 +36,7 @@ UF.unionAll(edges);
 ```js
 const edges = [[0,1],[0,2],[3,5],[5,4],[4,3]];
 const numberOfVertices = 6;
-// Or you could programmatically find unique vertices:
+// Or you could programmatically find distinct vertices:
 const numberOfVertices = new Set(edges.flat()).size;
 const UF = new UnionFind(numberOfVertices);
 for (const [src, dest] of edges) {
