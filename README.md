@@ -54,7 +54,7 @@ for (const [src, dest] of edges) {
 
 ## Get total number of connected nodes
 
-This will return the number of disjointed sets.
+This will return the number of disjointed components/sets.
 
 ```js
 // We assume you have already added edges
